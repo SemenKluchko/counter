@@ -13,10 +13,13 @@ function Counter() {
        }, [defaultValue]);
        
     return (
-      <div className="couner-container">
-          <div className="counter">Counter current number: {defaultValue}</div>
-          <button onClick ={increaseCounter}>+</button>
-          <button onClick ={reduceCounter}>-</button>
+      <div className="counter-container">
+          <div className="counter-text"><h3>Counter</h3></div>
+          <div className="counter-wrapper">
+            <button onClick ={increaseCounter}>+</button>
+            <span class="current-counter">{defaultValue}</span>
+            <button onClick ={reduceCounter}>-</button>
+          </div>
       </div>
     );
   }
