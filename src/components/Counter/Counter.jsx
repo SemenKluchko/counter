@@ -5,7 +5,7 @@ function Counter() {
     const [defaultValue, increaseValue] = useState(0);
 
     const increaseCounter = useCallback(() => {
-        (defaultValue >= 0) ? increaseValue(defaultValue + 1) : increaseValue(defaultValue);
+        increaseValue(defaultValue + 1);
        }, [defaultValue]);
     
     const reduceCounter = useCallback(() => {
